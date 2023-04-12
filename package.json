@@ -1,0 +1,25 @@
+{
+  "name": "astro-tigris",
+  "version": "1.0.0",
+  "description": "An Astro integration that enables accessing a Tigris NoSQL database",
+  "license": "MIT",
+  "globals": {
+    "globalThis": true
+  },
+  "workspaces": [
+    "./src",
+    "./demo",
+    "./demo-ssr"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=src",
+    "demo": "npm run dev --workspace=demo",
+    "demo-ssr": "npm run dev --workspace=demo-ssr",
+    "build": "npm run build --workspace=src",
+    "build-demo": "npm run build --workspace=demo",
+    "build-ssr": "npm run build --workspace=demo-ssr",
+    "clean": "npm run clean --workspace=src",
+    "prebuild": "npm run clean --workspace=src",
+    "prepublishOnly": "npm run build --workspace=src"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "@tigrisdata/astro",
+  "version": "1.0.0",
+  "description": "An Astro integration that enables accessing a Tigris NoSQL database",
+  "main": "./dist/astro-tigris.js",
+  "module": "./dist/astro-tigris.mjs",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tigrisdata/tigris-astro"
+  },
+  "homepage": "https://tigrisdata.com",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/astro-tigris.mjs",
+      "require": "./dist/astro-tigris.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "globals": {
+    "globalThis": true
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run clean && npm run build && cp ../README.md ./",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "lint": "eslint **/*.ts"
+  },
+  "keywords": [
+    "astro",
+    "tigris",
+    "astro-integration",
+    "astro-component"
+  ],
+  "dependencies": {
+    "@tigrisdata/core": "^1.0.0-beta.43",
+    "astro": "^1.2.4"
+  },
+  "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@types/node": "^18.7.13",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.38.0",
+    "prettier": "^2.8.7",
+    "rollup-plugin-polyfill-node": "^0.12.0",
+    "typescript": "^4.8.2",
+    "vite-plugin-dts": "^2.2.0"
+  }
+}

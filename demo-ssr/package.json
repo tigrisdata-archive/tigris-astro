@@ -1,0 +1,17 @@
+{
+  "name": "astro-sanity-demo-ssr",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/vercel": "^3.0.0",
+    "astro": "^2.0.4",
+    "@tigrisdata/astro": "latest"
+  }
+}

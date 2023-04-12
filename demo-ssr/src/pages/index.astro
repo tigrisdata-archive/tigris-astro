@@ -1,0 +1,54 @@
+---
+import { useTigrisCollection } from "@tigrisdata/astro";
+import { User } from "../db/user";
+
+const userCollection = await useTigrisCollection("users");
+const usersCursor = await userCollection.findMany({});
+const users = await usersCursor.toArray();
+---
+
+<style is:global>
+  html {
+    font-family: sans-serif;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+</style>
+
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<title>Astro</title>
+
+<body>
+  <div class="wrapper">
+    <h1>Users</h1>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>User</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          users.map((user) => (
+            <tr>
+              <td>
+                <img src={user.avatar} />
+              </td>
+              <td><a href={`/users/${user.id}`}>{user.username}</a></td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</body>

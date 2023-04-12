@@ -1,0 +1,54 @@
+---
+import { useTigrisCollection } from "@tigrisdata/astro";
+import { User } from "../../db/user";
+
+export async function getStaticPaths() {
+
+    const userCollection = await useTigrisCollection("users");
+    const usersCursor = await userCollection.findMany({});
+    const users = await usersCursor.toArray();
+
+    return users.map((user: User) => {
+        return {
+            params: {
+                id: user.id
+            },
+            props: {
+                user
+            }
+        }
+    })
+}
+
+const { user } = Astro.props
+
+---
+
+<style is:global>
+  html {
+    font-family: sans-serif;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+</style>
+
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<title>{user.username}</title>
+
+<body>
+  <div class="wrapper">
+    <a href="/">Back to list</a>
+
+    <h1>{user.username}</h1>
+    <img src={user.avatar}/>
+  </div>
+</body>
