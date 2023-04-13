@@ -45,14 +45,11 @@
     "package.json": "^2.0.1"
   },
   "devDependencies": {
-    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
-    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
     "@types/node": "^18.7.13",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
     "eslint": "^8.38.0",
     "prettier": "^2.8.7",
-    "rollup-plugin-polyfill-node": "^0.12.0",
     "typescript": "^4.8.2",
     "vite-plugin-dts": "^2.2.0"
   }
