@@ -1,6 +1,6 @@
 # Tigris Astro Integration
 
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/tigrisdata/tigris-astro/CI?label=build&logo=github)](https://github.com/tigrisdata/tigris-astro/actions/workflows/CI.yml) [![npm](https://img.shields.io/npm/v/@tigrisdata/astro)](https://www.npmjs.com/package/@tigrisdata/astro) [![Twitter Follow](https://img.shields.io/twitter/follow/tigrisdata?style=social)](https://twitter.com/tigrisdata) [![Discord](https://img.shields.io/discord/1033842669983633488?color=%23596fff&label=Discord&logo=discord&logoColor=%23ffffff)](https://tigris.dev/discord)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/tigrisdata/tigris-astro/CI.yml?label=build&logo=github)](https://github.com/tigrisdata/tigris-astro/actions/workflows/CI.yml) [![npm](https://img.shields.io/npm/v/@tigrisdata/astro?logo=npm&logoColor=white)](https://www.npmjs.com/package/@tigrisdata/astro) [![Twitter Follow](https://img.shields.io/twitter/follow/tigrisdata?style=social)](https://twitter.com/tigrisdata) [![Discord](https://img.shields.io/discord/1033842669983633488?color=%23596fff&label=Discord&logo=discord&logoColor=%23ffffff)](https://tigris.dev/discord)
 
 ## 💡 What is Tigris?
 
