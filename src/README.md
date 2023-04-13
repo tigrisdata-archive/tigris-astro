@@ -4,7 +4,7 @@
 
 ## 💡 What is Tigris?
 
-> If you are first-time user of Tigris, read the [Getting Started](https://www.tigrisdata.com/docs/quickstarts/quickstart-typescript/?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-astro) guide to cover the basics.
+> If you are first-time user of Tigris, read the [Getting Started](https://www.tigrisdata.com/docs/quickstarts/quickstart-typescript/?utm_source=github.com&utm_medium=readme&utm_campaign=tigris-astro) guide to cover the basics.
 
 ## 🔨 Installation
 
