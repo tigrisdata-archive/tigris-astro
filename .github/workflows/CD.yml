@@ -6,6 +6,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src
     steps:
       - uses: actions/checkout@v2
 
@@ -13,9 +16,6 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-
-      - name: Move into src directory
-        run: cd src
 
       - name: Update Version in package.json
         run: sed -i 's/X.X.X/${{ github.event.release.tag_name }}/g' ./package.json
