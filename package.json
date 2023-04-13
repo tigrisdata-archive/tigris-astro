@@ -18,8 +18,6 @@
     "build": "npm run build --workspace=src",
     "build-demo": "npm run build --workspace=demo",
     "build-ssr": "npm run build --workspace=demo-ssr",
-    "clean": "npm run clean --workspace=src",
-    "prebuild": "npm run clean --workspace=src",
-    "prepublishOnly": "npm run build --workspace=src"
+    "clean": "npm run clean --workspace=src"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@tigrisdata/astro",
-  "version": "1.0.0",
+  "version": "X.X.X",
   "description": "An Astro integration that enables accessing a Tigris NoSQL database",
   "main": "./dist/astro-tigris.js",
   "module": "./dist/astro-tigris.mjs",
@@ -41,7 +41,8 @@
   ],
   "dependencies": {
     "@tigrisdata/core": "^1.0.0-beta.43",
-    "astro": "^1.2.4"
+    "astro": "^1.2.4",
+    "package.json": "^2.0.1"
   },
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
