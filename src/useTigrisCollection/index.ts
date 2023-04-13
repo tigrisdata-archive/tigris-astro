@@ -1,4 +1,4 @@
-import { Collection, Tigris, TigrisCollectionType } from '@tigrisdata/core'
+import {Collection, Tigris, TigrisCollectionType} from '@tigrisdata/core'
 
 export async function useTigrisCollection<T extends TigrisCollectionType>(
   name: string

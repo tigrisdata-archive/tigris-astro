@@ -28,7 +28,7 @@
     "build": "vite build",
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
-    "prepublishOnly": "npm run clean && npm run build && cp ../README.md ./",
+    "prepublishOnly": "cp ../README.md ./",
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint './**/*.ts'"
