@@ -32,7 +32,23 @@ export default defineConfig({
   ],
 });
 ```
+or using `import.meta.env` with a `.env` file
 
+```js
+import { defineConfig } from "astro/config";
+import tigris from "@tigrisdata/astro";
+
+export default defineConfig({
+  integrations: [
+    tigris({
+      branch: import.meta.env.TIGRIS_DB_BRANCH,
+      projectName: import.meta.env.TIGRIS_PROJECT,
+      clientId: import.meta.env.TIGRIS_CLIENT_ID,
+      clientSecret: import.meta.env.TIGRIS_CLIENT_SECRET,
+    }),
+  ],
+});
+``` 
 ### Options
 
 When you initialize the integration, you can pass all [_@tigrisdata/core_ options](https://github.com/tigrisdata/tigris-client-ts/blob/3db0f1383f8d384f726ff9a836535a58298127f5/src/tigris.ts#L45).
@@ -55,7 +71,7 @@ import { useTigrisCollection } from "@tigrisdata/astro";
 import { User } from "./types/User";
 
 const userCollection = await useTigrisCollection<User>("users");
-const usersCursor = await userCollection.findMany({});
+const usersCursor = userCollection.findMany({});
 const users = await usersCursor.toArray();
 ---
 
